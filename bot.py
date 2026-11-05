@@ -7,7 +7,7 @@ from telegram.ext import Application, MessageHandler, filters, ContextTypes
 
 TOKEN = "9259539680:AAE6j6Ta9ozPSIsVaJp7ttuA3wX3l9NE5g0" # Yahan apna token daalein
 
-app = Flask(name) # Yahan name theek kar diya hai
+app = Flask(_name_) # Yahan name theek kar diya hai
 
 @app.route('/')
 def home():
