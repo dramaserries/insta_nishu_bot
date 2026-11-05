@@ -7,7 +7,7 @@ from telegram.ext import Application, MessageHandler, filters, ContextTypes
 
 TOKEN = "9259539680:AAE6j6Ta9ozPSIsVaJp7ttuA3wX3l9NE5g0" # Yahan apna token daalein
 
-app = Flask(_name_) # Yahan name theek kar diya hai
+app = Flask(__name__) # Yahan name theek kar diya hai
 
 @app.route('/')
 def home():
@@ -40,6 +40,6 @@ def main():
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, download))
     application.run_polling()
 
-if name == 'main': # Yahan bhi name theek kar diya hai
+if __name__ == '__main__': # Yahan bhi name theek kar diya hai
     threading.Thread(target=run_flask).start()
     main()
